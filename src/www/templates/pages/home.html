@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>${page_title}</title>
+    @css 'src/templates/page/home.css'
+</head>
+
+<body>
+    <h1 class="title">Hello, Vs.</h1>
+    @for var in list_of_object
+    <div>
+        <a href="${v_url}">${var.title}</a>
+        <span>${var.description}</span>
+    </div>
+    @end
+    <div>@include 'component.html'</div>
+</body>
+
+</html>

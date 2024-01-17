@@ -1,5 +1,7 @@
 module main
 
+import www
+
 fn main() {
-	println('Hello World!')
+	www.run()
 }
