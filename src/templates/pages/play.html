@@ -1,14 +1,23 @@
 <html>
 
 <head>
-    <title>Magus</title>
+    @include 'head.html'
     @css '/src/assets/css/home.css'
+    @js '/src/assets/js/controls.js'
 </head>
 
 <body>
-    <audio controls autoplay mute>
+    <audio id="audio" preload="auto">
         <source src="${sound_src}">
     </audio>
+    <span id="played"></span>
+    <button id="play" onclick="play();">
+        Play
+    </button>
+    <button id="pause" onclick="pause();">
+        Pause
+    </button>
+    <span id="left"></span>
 </body>
 
 </html>
