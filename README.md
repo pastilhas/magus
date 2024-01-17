@@ -1,6 +1,6 @@
 # MAGUS
 
-![](https://img.shields.io/badge/built%20with-vlang-blue)
+[![Built][BuiltBadge]][BuiltUrl]
 
 Magus is my personal site developed in [Vlang](https://vlang.io). This project works as my intro to Vlang,
 and I have many many features planned for it. My objective is to create a proof of concept for different
@@ -24,3 +24,6 @@ Some of the projects include:
 4. food
   - shopping list
   - recipies
+
+[BuiltUrl]: https://vlang.io/
+[BuiltBadge]: https://img.shields.io/badge/built%20with-vlang-blue
