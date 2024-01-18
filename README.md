@@ -9,21 +9,21 @@ projects, to show it is possible to create efficient, performant, and flexible c
 Some of the projects include:
 
 1. introduction page
-  - self presentation
-  - education / experience
-  - projects
+    - self presentation
+    - education / experience
+    - projects
 2. music player
-  - play random songs
-  - play playlists
-  - discover new songs
-  - follow artists
+    - play random songs
+    - play playlists
+    - discover new songs
+    - follow artists
 3. blog
-  - weekly updates about stuff
-  - tech, software, cats
-  - show personal interests
+    - weekly updates about stuff
+    - tech, software, cats
+    - show personal interests
 4. food
-  - shopping list
-  - recipies
+    - shopping list
+    - recipies
 
 [BuiltUrl]: https://vlang.io/
 [BuiltBadge]: https://img.shields.io/badge/built%20with-vlang-blue
