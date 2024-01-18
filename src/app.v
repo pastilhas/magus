@@ -3,6 +3,8 @@ module main
 import vweb
 import os
 
+const page_title = 'Magus'
+
 struct App {
 	vweb.Context
 }
@@ -26,7 +28,7 @@ fn new_app() &App {
 }
 
 @['/']
-pub fn (mut app App) pages_home() vweb.Result {
+pub fn (mut app App) home() vweb.Result {
 	page_title := 'V is the new V'
 	v_url := 'https://github.com/vlang/v'
 
@@ -45,7 +47,7 @@ pub fn (mut app App) pages_home() vweb.Result {
 }
 
 @['/play/:i']
-pub fn (mut app App) pages_play(i int) !vweb.Result {
+pub fn (mut app App) play(i int) vweb.Result {
 	path := './src/assets/dictionary.txt'
 	dictionary := os.read_lines(path) or { return app.not_found() }
 
