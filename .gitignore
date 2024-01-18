@@ -21,3 +21,4 @@ bin/
 
 # vweb and database
 *.db
+src/assets/dictionary.txt
