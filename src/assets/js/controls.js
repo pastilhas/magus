@@ -9,13 +9,12 @@ window.addEventListener("load", (event) => {
     time_left = document.querySelector("#left")
     play_btn = document.querySelector("#play_btn")
 
-    player.onplay = _ => { play_btn.innerText = 'PAUSE' };
+    player.onplay = _ => { play_btn.innerText = 'PAUSE'; update_time() };
     player.onpause = _ => { play_btn.innerText = 'PLAY' };
     player.onended = _ => { play_btn.innerText = 'PLAY' };
 
+    update_time_once()
     player.play()
-
-    update_time()
 })
 
 function play_pause() {
@@ -38,12 +37,16 @@ function format_time(time) {
     return `${hours}:${minutes}:${seconds}`
 }
 
-function update_time() {
+function update_time_once() {
     const played = Math.round(player.currentTime)
     const left = Math.round(player.duration - player.currentTime)
 
     time_played.innerText = format_time(played)
     time_left.innerText = format_time(left)
+}
+
+function update_time() {
+    update_time_once()
 
     if (!player.paused) {
         setTimeout(update_time, 125)
