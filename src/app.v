@@ -35,15 +35,10 @@ pub fn (mut app App) home() vweb.Result {
 
 @['/play/:i']
 pub fn (mut app App) play(i int) vweb.Result {
-	row := app.get_song(i) or { return app.not_found() }
+	song := app.get_song(i) or { return app.not_found() }
 
-	sound_name := row[0]
-	sound_src := row[1]
+	song_name := song.song_name
+	song_src := song.file_path
 
 	return $vweb.html()
-}
-
-fn (mut app App) get_song(i int) ![]string {
-	row := app.db.exec_one('select * from songs where oid = ${i}')!
-	return row.vals
 }
