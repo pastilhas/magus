@@ -6,7 +6,7 @@ h1.title {
 div#content {
     height: 100%;
     width: 100%;
-    gap: 3em;
+    gap: 1em;
     display: flex;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
