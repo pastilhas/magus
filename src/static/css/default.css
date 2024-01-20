@@ -1,12 +1,7 @@
-h1.title {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3b7bbf;
-}
-
 div#content {
     height: 100%;
     width: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +10,7 @@ div#content {
 
 div#player {
     height: 100%;
-    width: 30%;
+    width: 25%;
     gap: 1em;
     display: flex;
     flex-direction: column;
@@ -26,12 +21,19 @@ div#header {
     display: flex;
     justify-content: center;
     text-transform: capitalize;
+    font-weight: bolder;
 }
 
 div#cover {
     aspect-ratio: 1 / 1;
     background: radial-gradient(circle, darkgray 0%, gray 100%);
     border-radius: 1em;
+    overflow: hidden;
+}
+
+div#cover img{
+    width: 100%;
+    object-fit: cover;
 }
 
 button#play_btn {

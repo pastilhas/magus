@@ -5,7 +5,7 @@ import os
 import db.sqlite
 
 const (
-	page_title = 'Magus'
+	base_page_title = 'Magus'
 )
 
 struct App {
@@ -23,18 +23,23 @@ fn new_app() &App {
 	mut app := &App{
 		db: db
 	}
-	app.handle_static('assets', true)
-	app.mount_static_folder_at(os.resource_abs_path('.'), '/')
+
+	static_path := '${os.resource_abs_path('.')}/src/static'
+
+	app.handle_static('${static_path}', true)
+	app.mount_static_folder_at('${static_path}', '/')
 	return app
 }
 
 @['/']
 pub fn (mut app App) home() vweb.Result {
+	page_title := base_page_title
 	return $vweb.html()
 }
 
 @['/play/:i']
 pub fn (mut app App) player(i int) vweb.Result {
 	song := app.get_song(i) or { return app.not_found() }
+	page_title := '${song.title}'
 	return $vweb.html()
 }
