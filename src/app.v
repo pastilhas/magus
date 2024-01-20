@@ -34,11 +34,7 @@ pub fn (mut app App) home() vweb.Result {
 }
 
 @['/play/:i']
-pub fn (mut app App) play(i int) vweb.Result {
+pub fn (mut app App) player(i int) vweb.Result {
 	song := app.get_song(i) or { return app.not_found() }
-
-	song_name := song.title
-	song_src := song.path
-
 	return $vweb.html()
 }

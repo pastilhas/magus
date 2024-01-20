@@ -1,0 +1,25 @@
+<div id="player">
+    <div id="header">
+        <span id="title">
+            ${song.title} - ${song.authors[0].name}
+        </span>
+    </div>
+    <div id="cover">
+        <img src="${song.cover.path}" alt="cover of ${song.title} by ${song.authors[0].name}" />
+    </div>
+    <audio id="audio" preload="auto">
+        <source src="${song.path}">
+    </audio>
+    <div id="under">
+        <div id="time">
+            <progress id="playtime" max="1" value="0"></progress>
+        </div>
+        <div id="controls">
+            <span id="time_played"></span>
+            <button id="play_btn" onclick="play_pause()">
+                PLAY
+            </button>
+            <span id="time_left"></span>
+        </div>
+    </div>
+</div>

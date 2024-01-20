@@ -14,14 +14,14 @@ struct Song {
 
 fn Song.new(mut app App, song_id int) !&Song {
 	song_row := app.db.exec_one('SELECT * FROM song WHERE OID = ${song_id}')!
-	
+
 	author_rows := app.db.exec('SELECT * FROM song_author WHERE song_id = ${song_id}')!
 	mut authors := []Author{cap: author_rows.len}
 	for author_row in author_rows {
 		author_id := strconv.atoi(author_row.vals[1])!
 		authors << Author.new(mut app, author_id)!
 	}
-	
+
 	tag_rows := app.db.exec('SELECT * FROM song_tag WHERE song_id = ${song_id}')!
 	mut tags := []Tag{cap: tag_rows.len}
 	for tag_row in tag_rows {

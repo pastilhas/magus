@@ -6,18 +6,31 @@ h1.title {
 div#content {
     height: 100%;
     width: 100%;
-    gap: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: center;
     align-items: center;
 }
 
+div#player {
+    height: 100%;
+    width: 30%;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div#header {
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
 div#cover {
-    width: 25%;
     aspect-ratio: 1 / 1;
-    background: radial-gradient(circle, rgba(98,133,154,1) 0%, rgba(148,187,233,1) 100%);
+    background: radial-gradient(circle, darkgray 0%, gray 100%);
     border-radius: 1em;
 }
 
@@ -25,15 +38,13 @@ button#play_btn {
     padding: 0.5em;
 }
 
-div#controls_box {
-    width: 25%;
-}
-
-div#controls_box > * {
+progress#playtime {
     width: 100%;
+    margin-bottom: 0.5em;
 }
 
 div#controls {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }

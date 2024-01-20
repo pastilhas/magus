@@ -1,30 +1,30 @@
+'use strict'
+
 var player
 var time_played
 var time_left
 var play_btn
 var progress_bar
 
+var timeout
+
 window.addEventListener("load", (event) => {
     player = document.querySelector("#audio")
-    time_played = document.querySelector("#played")
-    time_left = document.querySelector("#left")
+    time_played = document.querySelector("#time_played")
+    time_left = document.querySelector("#time_left")
     play_btn = document.querySelector("#play_btn")
     progress_bar = document.querySelector("#playtime")
 
-    player.onplay = _ => { play_btn.innerText = 'PAUSE'; update_time() };
-    player.onpause = _ => { play_btn.innerText = 'PLAY' };
-    player.onended = _ => { play_btn.innerText = 'PLAY' };
+    player.onplay = _ => { clearTimeout(timeout); play_btn.innerText = 'PAUSE'; update_time() }
+    player.onpause = _ => { play_btn.innerText = 'PLAY' }
+    player.onended = _ => { play_btn.innerText = 'PLAY' }
 
     update_time_once()
     player.play()
 })
 
 function play_pause() {
-    if (player.paused) {
-        player.play()
-    } else {
-        player.pause()
-    }
+    player.paused ? player.play() : player.pause()
 }
 
 function format_time(time) {
@@ -53,6 +53,6 @@ function update_time() {
     update_time_once()
 
     if (!player.paused) {
-        setTimeout(update_time, 125)
+        timeout = setTimeout(update_time, 125)
     }
 }
