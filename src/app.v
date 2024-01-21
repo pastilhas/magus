@@ -19,12 +19,12 @@ fn run() {
 }
 
 fn new_app() &App {
-	mut db := sqlite.connect('database.db') or { panic(err) }
+	mut db := sqlite.connect('db/database.db') or { panic(err) }
 	mut app := &App{
 		db: db
 	}
 
-	static_path := '${os.resource_abs_path('.')}/src/static'
+	static_path := '${os.resource_abs_path('./src/static')}'
 
 	app.handle_static('${static_path}', true)
 	app.mount_static_folder_at('${static_path}', '/')

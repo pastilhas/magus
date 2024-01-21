@@ -1,6 +1,11 @@
-# MAGUS
+<div align="center">
+    <h1>MAGUS</h1>
+    <h5>The Refactoring library based off the Refactoring book by Martin Fowler</h5>
+    <h6>'If I use an environment that has good automated refactorings, I can trust those refactorings' - Martin Fowler</h6>
 
 [![Built][BuiltBadge]][BuiltUrl]
+![WIP][WIPBadge]
+</div>
 
 Magus is my personal site developed in [Vlang](https://vlang.io). This project works as my intro to Vlang,
 and I have many many features planned for it. My objective is to create a proof of concept for different
@@ -26,4 +31,5 @@ Some of the projects include:
     - recipies
 
 [BuiltUrl]: https://vlang.io/
-[BuiltBadge]: https://img.shields.io/badge/built%20with-vlang-blue
+[BuiltBadge]: https://img.shields.io/badge/Vlang-gray?style=for-the-badge&logo=v
+[WIPBadge]: https://img.shields.io/badge/WORK%20IN%20PROGRESS-%20rgb(255%2C%20172%2C%2028)%20?style=for-the-badge

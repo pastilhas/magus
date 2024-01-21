@@ -1,4 +1,4 @@
-div#content {
+div.content {
     height: 100%;
     width: 100%;
     font-family: sans-serif;
@@ -6,6 +6,21 @@ div#content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+div.top {
+    height: 100%;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p.intro {
+    width: 25%;
+    text-align: center;
 }
 
 div#player {
