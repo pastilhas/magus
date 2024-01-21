@@ -20,16 +20,18 @@ body {
 .footer {
     width: 512px;
     margin-bottom: 2em;
-    color: rgb(47, 49, 70)
+    color: #0C0C0C
 }
 
-.footer a {
+a {
+    font-style: oblique;
     text-decoration: none;
-    color: rgb(47, 49, 70)
+    color: #5C5C5C
 }
 
-.footer a:hover {
-    color: darkblue;
+a:hover {
+    font-style: oblique;
+    color: #5C0C0C
 }
 
 .topnav-btn {
@@ -61,6 +63,12 @@ body {
 .intro {
     width: 512px;
     text-align: center;
+}
+
+.about {
+    height: 700px;
+    width: 512px;
+    text-align: justify;
 }
 
 #player {
