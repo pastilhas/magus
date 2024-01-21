@@ -43,3 +43,21 @@ pub fn (mut app App) player(i int) vweb.Result {
 	page_title := '${song.title}'
 	return $vweb.html()
 }
+
+@['/about']
+pub fn (mut app App) about() vweb.Result {
+	page_title := base_page_title
+	return $vweb.html()
+}
+
+@['/blog']
+pub fn (mut app App) blog() vweb.Result {
+	page_title := base_page_title
+	return $vweb.html()
+}
+
+@['/gallery']
+pub fn (mut app App) gallery() vweb.Result {
+	page_title := base_page_title
+	return $vweb.html()
+}

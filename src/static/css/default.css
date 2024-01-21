@@ -1,6 +1,30 @@
-div.content {
+body {
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topnav {
+    width: 512px;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav-btn {
+    min-width: 5em;
+    padding: 0.1em;
+    font-size: larger;
+}
+
+.content {
+    width: 100%;
+    flex-grow: 1;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -8,7 +32,7 @@ div.content {
     align-items: center;
 }
 
-div.top {
+.top {
     height: 100%;
     gap: 1em;
     display: flex;
@@ -18,49 +42,49 @@ div.top {
     text-align: center;
 }
 
-p.intro {
-    width: 25%;
+.intro {
+    width: 512px;
     text-align: center;
 }
 
-div#player {
+#player {
     height: 100%;
-    width: 25%;
+    width: 512px;
     gap: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-div#header {
+#header {
     display: flex;
     justify-content: center;
     text-transform: capitalize;
     font-weight: bolder;
 }
 
-div#cover {
+#cover {
     aspect-ratio: 1 / 1;
     background: radial-gradient(circle, darkgray 0%, gray 100%);
     border-radius: 1em;
     overflow: hidden;
 }
 
-div#cover img{
+#cover img{
     width: 100%;
     object-fit: cover;
 }
 
-button#play_btn {
+#play_btn {
     padding: 0.5em;
 }
 
-progress#playtime {
+#playtime {
     width: 100%;
     margin-bottom: 0.5em;
 }
 
-div#controls {
+#controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
