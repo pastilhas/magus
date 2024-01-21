@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .topnav {
@@ -14,6 +15,21 @@ body {
     margin-top: 2em;
     display: flex;
     justify-content: space-between;
+}
+
+.footer {
+    width: 512px;
+    margin-bottom: 2em;
+    color: rgb(47, 49, 70)
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgb(47, 49, 70)
+}
+
+.footer a:hover {
+    color: darkblue;
 }
 
 .topnav-btn {
@@ -70,7 +86,7 @@ body {
     overflow: hidden;
 }
 
-#cover img{
+#cover img {
     width: 100%;
     object-fit: cover;
 }
