@@ -1,10 +1,9 @@
 <div align="center">
     <h1>MAGUS</h1>
-    <h5>The Refactoring library based off the Refactoring book by Martin Fowler</h5>
-    <h6>'If I use an environment that has good automated refactorings, I can trust those refactorings' - Martin Fowler</h6>
 
 [![Built][BuiltBadge]][BuiltUrl]
 ![WIP][WIPBadge]
+
 </div>
 
 Magus is my personal site developed in [Vlang](https://vlang.io). This project works as my intro to Vlang,
