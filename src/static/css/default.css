@@ -3,33 +3,66 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
+}
+
+[class*="fx-"] {
     display: flex;
+}
+
+.fx-row {
+    flex-direction: row;
+}
+
+.fx-col {
     flex-direction: column;
+}
+
+.fx-main {
     justify-content: center;
+}
+
+.fx-cross {
     align-items: center;
+}
+
+.fx-btwn {
+    justify-content: space-between;
+}
+
+.center-text {
     text-align: center;
+}
+
+.m-1 {
+    margin: 1em;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
 }
 
 .topnav {
     width: 512px;
-    margin-top: 2em;
-    display: flex;
-    justify-content: space-between;
 }
 
 .footer {
     width: 512px;
-    margin-bottom: 2em;
-    color: rgb(47, 49, 70)
+    color: #0C0C0C
 }
 
-.footer a {
+a {
+    font-style: oblique;
     text-decoration: none;
-    color: rgb(47, 49, 70)
+    color: #5C5C5C
 }
 
-.footer a:hover {
-    color: darkblue;
+a:hover {
+    color: #5C0C0C
 }
 
 .topnav-btn {
@@ -41,26 +74,22 @@ body {
 .content {
     width: 100%;
     flex-grow: 1;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .top {
     height: 100%;
     gap: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .intro {
     width: 512px;
     text-align: center;
+}
+
+.about {
+    height: 700px;
+    width: 512px;
+    text-align: justify;
 }
 
 #player {
